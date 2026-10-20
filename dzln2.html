@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Website Super Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <p class="loading-text">Memuat keajaiban...</p>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Background Video -->
+<div class="bg-video-container">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="bg-overlay"></div>
+
+    <!-- Particles -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes" id="floatingShapes"></div>
+
+    <!-- RGB Cursor -->
+    <div class="cursor cursor-main" id="cursorMain"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-title">✨ Selamat Datang!</div>
+        <div class="notification-body">Klik di mana saja untuk efek interaktif!</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">✨ INTERAKTIF</div>
+        <ul class="nav-links">
+            <li><a href="#home" data-tooltip="Beranda">🏠 Home</a></li>
+            <li><a href="#features" data-tooltip="Fitur">⚡ Fitur</a></li>
+            <li><a href="#interactive" data-tooltip="Interaktif">🎮 Main</a></li>
+            <li><a href="#about" data-tooltip="Tentang">💡 Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeBtn" data-tooltip="Ganti Tema">🎨</button>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <button class="music-btn" id="musicBtn" data-tooltip="Play/Pause Musik">🎵</button>
+    </div>
+
+    <!-- Audio Visualizer -->
+    <div class="visualizer" id="visualizer"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Website Super<br>Interaktif ✨</h1>
+        <p>Rasakan pengalaman web yang belum pernah ada sebelumnya. Setiap klik, setiap hover, setiap gerakan menciptakan keajaiban visual.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" data-tooltip="Mulai Jelajahi">🚀 Mulai Jelajahi</button>
+            <button class="btn btn-secondary" data-tooltip="Pelajari Lebih">📖 Pelajari Lebih</button>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <h2 class="section-title">⚡ Fitur Interaktif</h2>
+        <div class="cards-grid">
+            <div class="card" data-tooltip="Kursor RGB">
+                <div class="card-icon">🌈</div>
+                <h3>Kursor RGB</h3>
+                <p>Kursor berubah warna pelangi saat bergerak. Gerakkan mouse dan lihat keajaibannya!</p>
+            </div>
+            <div class="card" data-tooltip="Efek Klik">
+                <div class="card-icon">💥</div>
+                <h3>Efek Klik</h3>
+                <p>Setiap klik menghasilkan ripple effect berwarna. Klik di mana saja!</p>
+            </div>
+            <div class="card" data-tooltip="Partikel">
+                <div class="card-icon">✨</div>
+                <h3>Partikel Melayang</h3>
+                <p>Partikel-partikel cantik melayang di background menciptakan suasana magis.</p>
+            </div>
+            <div class="card" data-tooltip="Musik Ambient">
+                <div class="card-icon">🎵</div>
+                <h3>Musik Ambient</h3>
+                <p>Background music yang menenangkan. Klik tombol musik untuk play/pause.</p>
+            </div>
+            <div class="card" data-tooltip="Visualizer">
+                <div class="card-icon">📊</div>
+                <h3>Audio Visualizer</h3>
+                <p>Visualisasi audio yang bergerak sesuai irama musik yang sedang diputar.</p>
+            </div>
+            <div class="card" data-tooltip="Animasi Scroll">
+                <div class="card-icon">🎬</div>
+                <h3>Animasi Scroll</h3>
+                <p>Elemen-elemen muncul dengan animasi saat kamu scroll ke bawah.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section class="section" id="interactive">
+        <h2 class="section-title">🎮 Area Interaktif</h2>
+
+        <!-- Counter -->
+        <div class="counter-section">
+            <h3 style="color: rgba(255,255,255,0.7); margin-bottom: 10px;">Counter Interaktif</h3>
+            <div class="counter-display" id="counterDisplay">0</div>
+            <div>
+                <button class="counter-btn" id="decreaseBtn">−</button>
+                <button class="counter-btn" id="resetBtn">↺</button>
+                <button class="counter-btn" id="increaseBtn">+</button>
+            </div>
+        </div>
+
+        <!-- Color Mixer -->
+        <div class="color-mixer">
+            <h3 style="color: rgba(255,255,255,0.7); margin-bottom: 10px;">🎨 Color Mixer</h3>
+            <div class="color-preview" id="colorPreview" style="background: rgb(128, 0, 128);"></div>
+            <div class="slider-container">
+                <label>🔴 Red: <span id="redVal">128</span></label>
+                <input type="range" id="redSlider" min="0" max="255" value="128">
+            </div>
+            <div class="slider-container">
+                <label>🟢 Green: <span id="greenVal">0</span></label>
+                <input type="range" id="greenSlider" min="0" max="255" value="0">
+            </div>
+            <div class="slider-container">
+                <label>🔵 Blue: <span id="blueVal">128</span></label>
+                <input type="range" id="blueSlider" min="0" max="255" value="128">
+            </div>
+        </div>
+
+        <!-- Interactive Text -->
+        <div style="margin-top: 60px;">
+            <h3 style="color: rgba(255,255,255,0.7); margin-bottom: 20px; text-align: center;">✍️ Hover Teks di Bawah</h3>
+            <div class="interactive-text" id="interactiveText">
+                Setiap huruf bisa kamu hover untuk efek spesial. Coba gerakkan kursor di atas teks ini dan lihat apa yang terjadi!
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">💡 Tentang</h2>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <p style="color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1.1rem;">
+                Website ini dibuat dengan penuh cinta menggunakan HTML, CSS, dan JavaScript murni. 
+                Semua efek interaktif dirancang untuk memberikan pengalaman browsing yang menyenangkan dan mengesankan.
+                <br><br>
+                🎨 Kursor RGB &nbsp;|&nbsp; 💥 Click Effects &nbsp;|&nbsp; ✨ Particles &nbsp;|&nbsp; 🎵 Audio Visualizer
+            </p>
+        </div>
+    </section>
+
+    <!-- Audio Element -->
+    <audio id="bgAudio" loop>
+        <source src="ambient.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
